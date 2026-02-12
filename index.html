@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Be My Valentine</title>
+    <style>
+        /* Grundlayout */
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #fff0f3; /* Sanftes Valentins-Rosa */
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            overflow: hidden;
+        }
+
+        /* Container für die Karte */
+        .card {
+            background-color: white;
+            padding: 40px;
+            border-radius: 25px;
+            box-shadow: 0 15px 35px rgba(255, 75, 110, 0.2);
+            text-align: center;
+            max-width: 85%;
+            border: 2px solid #ff4d6d;
+        }
+
+        /* Überschrift */
+        h1 {
+            color: #c9184a;
+            font-size: 2.2rem;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        /* Das schlagende Herz */
+        .heart {
+            color: #ff4d6d;
+            font-size: 80px;
+            margin: 20px 0;
+            display: inline-block;
+            animation: beat 0.8s infinite alternate;
+            filter: drop-shadow(0 0 10px rgba(255, 77, 109, 0.4));
+        }
+
+        /* Herz-Animation */
+        @keyframes beat {
+            to { transform: scale(1.2); }
+        }
+
+        /* Nachrichtentext */
+        p {
+            color: #590d22;
+            font-size: 1.1rem;
+            margin-top: 15px;
+        }
+
+        /* Kleine dekorative Herzen im Hintergrund */
+        .floating-heart {
+            position: absolute;
+            color: rgba(255, 77, 109, 0.2);
+            font-size: 20px;
+            z-index: -1;
+            animation: float 5s linear infinite;
+        }
+
+        @keyframes float {
+            0% { transform: translateY(100vh) rotate(0deg); opacity: 1; }
+            100% { transform: translateY(-10vh) rotate(360deg); opacity: 0; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="floating-heart" style="left: 10%; animation-duration: 6s;">❤️</div>
+    <div class="floating-heart" style="left: 25%; animation-duration: 8s;">❤️</div>
+    <div class="floating-heart" style="left: 70%; animation-duration: 7s;">❤️</div>
+    <div class="floating-heart" style="left: 85%; animation-duration: 9s;">❤️</div>
+
+    <div class="card">
+        <div class="heart">❤️</div>
+        <h1>Will you be my Valentine?</h1>
+        <p>luv you the most übrigens hehe</p>
+    </div>
+
+</body>
+</html>
+
